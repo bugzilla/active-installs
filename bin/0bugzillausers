@@ -1,0 +1,5 @@
+#!/bin/sh
+nice /root/bin/bz-active-installs.pl >> /root/var/bz-active.csv
+nice /root/bin/bz-active-js.pl > /var/www/html/active/active.js.new
+mv -f /var/www/html/active/active.js.new /var/www/html/active/active.js
+chown mkanat:apache /var/www/html/active/active.js
